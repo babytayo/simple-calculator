@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function calculateAddition() {
+        let firstNumber = document.getElementById('firstNumber').value
+        let secondNumber = document.getElementById('secondNumber').value
+        let result = Number(firstNumber) + Number(secondNumber)
+
+        document.getElementById('result').innerText = result
+        console.log('Addition done successfully');
+    } 
+</script>
+
+<style>
+    body {
+        padding: 2em;
+        background-color: white;
+    }
+
+    .calculator-body {
+        width: 320px;
+        padding: 1em;
+        margin: 0px auto;
+        border: 2px green solid;
+        background-color: yellowgreen;
+    }
+
+    .title {
+        color: white;
+        font-size: 2em;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
+    #firstNumber,
+    #secondNumber {
+        padding: 1em;
+        margin-bottom: 1em;
+        width: 90%;
+        border: 1px green solid;
+    }
+
+    .calculateButton {
+        padding: 1em;
+        margin-bottom: 1em;
+        background-color: green;
+        color: white;
+        border: 0px;
+        width: 100%;
+    }
+
+    .result-parent {
+        padding: 1em;
+        margin-top: 1em;
+        background-color: white;
+    }
+</style>
+
+<body>
+    <div class="calculator-body">
+        <div class="title">Simple Calculator</div>
+
+        <div>
+            <input id="firstNumber" placeholder="Enter first number" />
+        </div>
+        <div>
+            <input id="secondNumber" placeholder="Enter second number">
+        </div>
+        <div>
+            <button class="calculateButton" onclick="calculateAddition()">Add numbers</button>
+        </div>
+
+        <div class="result-parent">Result:
+            <span id="result"></span>
+        </div>
+    </div>
+</body>
+
+
+</html>
